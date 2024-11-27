@@ -18,13 +18,12 @@ const Filters = ({ filter, setFilter }) => {
 
   }
   return (
-    <div className="filters flex justify-between">
+    <div className="filters flex justify-between gap-3">
       <button style={ {
             flex: '1',
             backgroundColor: filter === 'all' ? 'green' : 'lightgray',
             color: filter === 'all' ? 'white' : 'black',
             padding: '10px',
-            marginRight: '10px',
             border: '1px solid black',
             borderRadius: '5px',
             fontWeight:'bold'
@@ -35,7 +34,6 @@ const Filters = ({ filter, setFilter }) => {
             backgroundColor: filter === 'completed' ? 'green' : 'lightgray',
             color: filter === 'completed' ? 'white' : 'black',
             padding: '10px',
-            marginRight: '10px',
             border: '1px solid black',
             borderRadius: '5px',
             fontWeight:'bold'
@@ -47,7 +45,6 @@ const Filters = ({ filter, setFilter }) => {
             backgroundColor: filter === 'pending' ? 'green' : 'lightgray',
             color: filter === 'pending' ? 'white' : 'black',
             padding: '10px',
-            marginRight: '10px',
             border: '1px solid black',
             borderRadius: '5px',
             fontWeight:'bold'

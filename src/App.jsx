@@ -52,14 +52,15 @@ const filteredTasks = tasks.filter((task) => {
 });
 
 return (
-  <div className="h-screen bg-orange-50 flex" style={isMobile ? mobileGridDesign : gridDesign}>
+  <div className="flex justify-center ">
+  <div className="h-screen bg-yellow-50 flex lg:w-2/3  border min-h-screen" style={isMobile ? mobileGridDesign : gridDesign}>
       <div className="" style={{gridArea:'header'}}>
-        <h1 className="text-center text-white font-bold bg-blue-500" style={{fontSize:'40px',border:'solid lihgtgray',borderRadius:'10px'}}>To Do List</h1>
+        <h1 className="text-center text-white font-bold bg-yellow-900" style={{fontSize:'40px',border:'solid lihgtgray',borderRadius:'10px'}}>To Do List</h1>
       </div>
-        <div className= "bg-orange-200" style={{ gridArea: "sidebar",borderRadius:'10px'}}>
+        <div className= "bg-orange-100" style={{ gridArea: "sidebar",borderRadius:'10px'}}>
         <TaskForm onAddTask={addTask} />
       </div>
-      <div className="sm:flex-row" style={{gridArea:'main',background:'',display:'flex', flexDirection:'column'}}>
+      <div className="sm:flex-row bg-yellow-100" style={{gridArea:'main',background:'',display:'flex', flexDirection:'column'}}>
         <Filters filter={filter} setFilter={setFilter} />
         <TaskList
           tasks={filteredTasks}
@@ -70,6 +71,7 @@ return (
       <div>
          {new Date().toLocaleDateString()}
       </div>
+  </div>
   </div>
 );
 };
